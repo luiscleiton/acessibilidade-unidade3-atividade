@@ -30,9 +30,9 @@ estar no lugar. Não há resposta única para todos os itens — argumente sua e
 
 ### 1. Aparência disfarçada de significado
 
-- [ ] Existe algum texto em negrito ou itálico que na verdade tem **importância** ou **ênfase**? Qual tag deveria estar ali?
-- [ ] Existe algum sublinhado que pode ser confundido com link?
-- [ ] Existe alguma tag obsoleta que só controla tamanho de fonte?
+- [X] Existe algum texto em negrito ou itálico que na verdade tem **importância** ou **ênfase**? Qual tag deveria estar ali?
+- [X] Existe algum sublinhado que pode ser confundido com link?
+- [X] Existe alguma tag obsoleta que só controla tamanho de fonte?
 
 ### 2. Hierarquia de cabeçalhos
 
