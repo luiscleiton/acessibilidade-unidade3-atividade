@@ -44,13 +44,13 @@ estar no lugar. Não há resposta única para todos os itens — argumente sua e
 
 ### 3. Landmarks
 
-- [ ] A página tem cabeçalho de site? Está em `<header>`?
-- [ ] A navegação principal está em `<nav>`?
-- [ ] Existe **mais de uma** área de navegação? Como um leitor de tela diferencia uma da outra?
-- [ ] Onde começa e termina o conteúdo principal? Ele está em `<main>`?
-- [ ] O conteúdo complementar da lateral está em `<aside>`?
-- [ ] O rodapé está em `<footer>`?
-- [ ] O idioma da página está declarado na tag `<html>`?
+- [X] A página tem cabeçalho de site? Está em `<header>`?
+- [X] A navegação principal está em `<nav>`?
+- [X] Existe **mais de uma** área de navegação? Como um leitor de tela diferencia uma da outra?
+- [X] Onde começa e termina o conteúdo principal? Ele está em `<main>`?
+- [X] O conteúdo complementar da lateral está em `<aside>`?
+- [X] O rodapé está em `<footer>`?
+- [X] O idioma da página está declarado na tag `<html>`?
 
 ### 4. Tabelas
 
