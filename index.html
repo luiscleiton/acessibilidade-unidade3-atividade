@@ -41,21 +41,27 @@
       font-size: 14px;
     }
 
-    #menu {
-      background: #2c3a5e;
-      padding: 10px 24px;
+    #menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
     }
 
     #menu span a {
+    
+    }
+
+    #menu a {
       color: #fff;
       text-decoration: none;
-      margin-right: 20px;
       font-size: 15px;
       display: inline-block;
       padding: 4px 0;
     }
 
-    #menu span a:hover {
+    #menu a:hover {
       text-decoration: underline;
     }
 
@@ -200,6 +206,11 @@
       border-radius: 6px;
       font-size: 14px;
     }
+
+    .categorias {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
   </style>
 </head>
 
@@ -283,13 +294,13 @@
 
         <h2>Categorias em destaque</h2>
 
-        <div class="lista-falsa">
-          Guitarras e Baixos<br>
-          Baterias e Percussão<br>
-          Teclados e Sintetizadores<br>
-          Microfones<br>
-          Acessórios<br>
-        </div>
+        <ul class="categorias">
+          <li>Guitarras e Baixos</li>
+          <li>Baterias e Percussão</li>
+          <li>Teclados e Sintetizadores</li>
+          <li>Microfones</li>
+          <li>Acessórios</li>
+        </ul>
 
         <caption>Comparativo de modelos</caption>
 
