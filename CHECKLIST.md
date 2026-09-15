@@ -54,12 +54,12 @@ estar no lugar. Não há resposta única para todos os itens — argumente sua e
 
 ### 4. Tabelas
 
-- [ ] Quantas tabelas existem no arquivo? Todas contêm **dados tabulares**?
-- [ ] Alguma tabela está sendo usada só para **posicionar** elementos na tela? O que substitui isso hoje?
-- [ ] A tabela de dados tem um título programático?
-- [ ] As células de cabeçalho são `<th>` ou apenas `<td>` estilizadas?
-- [ ] Existe indicação de qual cabeçalho pertence a qual linha/coluna?
-- [ ] Se o leitor de tela anunciar só "R$ 7.150,00", o usuário sabe de que modelo se trata?
+- [X] Quantas tabelas existem no arquivo? Todas contêm **dados tabulares**?
+- [X] Alguma tabela está sendo usada só para **posicionar** elementos na tela? O que substitui isso hoje?
+- [X] A tabela de dados tem um título programático?
+- [X] As células de cabeçalho são `<th>` ou apenas `<td>` estilizadas?
+- [X] Existe indicação de qual cabeçalho pertence a qual linha/coluna?
+- [X] Se o leitor de tela anunciar só "R$ 7.150,00", o usuário sabe de que modelo se trata?
 
 ### 5. Links e botões
 
