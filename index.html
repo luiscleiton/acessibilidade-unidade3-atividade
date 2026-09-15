@@ -370,12 +370,24 @@
           <label for="senha">Senha *</label>
           <input type="password" id="senha" required placeholder="Crie uma senha">
 
-          <div style="font-weight:600; margin:14px 0 6px;">Turno preferido para contato *</div>
-          <div>
-            <input type="radio" name="turno" id="manha" value="manha" required> Manhã<br>
-            <input type="radio" name="turno" id="tarde" value="tarde"> Tarde<br>
-            <input type="radio" name="turno" id="noite" value="noite"> Noite
-          </div>
+          <fieldset>
+            <legend>Turno preferido para contato *</legend>
+
+            <label>
+              <input type="radio" name="turno" value="manha" required>
+              Manhã
+            </label>
+
+            <label>
+              <input type="radio" name="turno" value="tarde">
+              Tarde
+            </label>
+
+            <label>
+              <input type="radio" name="turno" value="noite">
+              Noite
+            </label>
+          </fieldset>
 
           <div style="font-weight:600; margin:14px 0 6px;">Assuntos de interesse</div>
           <div>
