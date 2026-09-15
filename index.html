@@ -211,6 +211,12 @@
       margin: 10px 0;
       padding-left: 20px;
     }
+
+    .produtos {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
   </style>
 </head>
 
@@ -271,18 +277,23 @@
 
         <h3>Guitarras Elétricas</h3>
 
-        <div class="cartao">
-          <b>Stratocaster HSS</b><br>
-          R$ 4.290,00<br>
-          <button type="button" class="botao" onclick="adicionarCarrinho(101)">Adicionar ao carrinho</button>
-        </div>
+        <ul class="produtos">
+          <li class="cartao">
+            <strong>Stratocaster HSS</strong><br>
+            R$ 4.290,00<br>
+            <button type="button" class="botao" onclick="adicionarCarrinho(101)">
+              Adicionar ao carrinho
+            </button>
+          </li>
 
-        <div class="cartao">
-          <b>Les Paul Standard</b><br>
-          R$ 7.150,00<br>
-          <button type="button" class="botao" onclick="adicionarCarrinho(102)">Adicionar ao carrinho</button>
-
-        </div>
+          <li class="cartao">
+            <strong>Les Paul Standard</strong><br>
+            R$ 7.150,00<br>
+            <button type="button" class="botao" onclick="adicionarCarrinho(102)">
+              Adicionar ao carrinho
+            </button>
+          </li>
+        </ul>
 
         <h2>Baterias</h2>
 
