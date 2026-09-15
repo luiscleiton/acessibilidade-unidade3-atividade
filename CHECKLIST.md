@@ -73,10 +73,10 @@ estar no lugar. Não há resposta única para todos os itens — argumente sua e
 
 ### 6. Listas
 
-- [ ] O menu do topo é uma lista de verdade?
-- [ ] Existe alguma sequência de itens separada por `<br>`?
-- [ ] Os produtos formam uma lista? E os links da barra lateral?
-- [ ] Em cada caso: a ordem importa? (`<ol>`) Ou não? (`<ul>`)
+- [X] O menu do topo é uma lista de verdade?
+- [X] Existe alguma sequência de itens separada por `<br>`?
+- [X] Os produtos formam uma lista? E os links da barra lateral?
+- [X] Em cada caso: a ordem importa? (`<ol>`) Ou não? (`<ul>`)
 
 ### 7. Formulário
 
