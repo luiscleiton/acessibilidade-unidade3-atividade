@@ -36,11 +36,11 @@ estar no lugar. Não há resposta única para todos os itens — argumente sua e
 
 ### 2. Hierarquia de cabeçalhos
 
-- [ ] Liste, na ordem, todos os cabeçalhos da página. Quantos `<h1>` existem?
-- [ ] Algum título "parece" título mas não usa tag de cabeçalho?
-- [ ] Existe algum nível pulado (h1 → h3, h2 → h6)?
-- [ ] Algum cabeçalho foi escolhido pelo **tamanho** que produz, e não pelo nível que representa?
-- [ ] Desenhe a hierarquia final como um índice de livro. Ela faz sentido?
+- [X] Liste, na ordem, todos os cabeçalhos da página. Quantos `<h1>` existem?
+- [X] Algum título "parece" título mas não usa tag de cabeçalho?
+- [X] Existe algum nível pulado (h1 → h3, h2 → h6)?
+- [X] Algum cabeçalho foi escolhido pelo **tamanho** que produz, e não pelo nível que representa?
+- [X] Desenhe a hierarquia final como um índice de livro. Ela faz sentido?
 
 ### 3. Landmarks
 
