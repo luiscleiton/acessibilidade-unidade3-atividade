@@ -80,14 +80,14 @@ estar no lugar. Não há resposta única para todos os itens — argumente sua e
 
 ### 7. Formulário
 
-- [ ] Cada campo tem um `<label>` de verdade?
-- [ ] Algum campo é identificado **apenas** pelo placeholder? O que acontece quando o usuário começa a digitar?
-- [ ] Algum `<label>` existe mas não está associado ao campo? Teste clicando no texto do rótulo: o foco vai para o input?
-- [ ] A obrigatoriedade é comunicada só pelo asterisco visual?
-- [ ] As mensagens de erro dizem **qual campo**, **o que está errado** e **como corrigir**?
-- [ ] As mensagens de erro estão programaticamente ligadas aos seus campos?
-- [ ] Os botões de rádio estão agrupados? Ao chegar neles, dá para saber **qual é a pergunta**?
-- [ ] E as caixas de seleção?
+- [X] Cada campo tem um `<label>` de verdade?
+- [X] Algum campo é identificado **apenas** pelo placeholder? O que acontece quando o usuário começa a digitar?
+- [X] Algum `<label>` existe mas não está associado ao campo? Teste clicando no texto do rótulo: o foco vai para o input?
+- [X] A obrigatoriedade é comunicada só pelo asterisco visual?
+- [X] As mensagens de erro dizem **qual campo**, **o que está errado** e **como corrigir**?
+- [X] As mensagens de erro estão programaticamente ligadas aos seus campos?
+- [X] Os botões de rádio estão agrupados? Ao chegar neles, dá para saber **qual é a pergunta**?
+- [X] E as caixas de seleção?
 
 ## Como testar o que você corrigiu
 
