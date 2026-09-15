@@ -63,13 +63,13 @@ estar no lugar. Não há resposta única para todos os itens — argumente sua e
 
 ### 5. Links e botões
 
-- [ ] Leia **só** os textos dos links, sem o parágrafo em volta. Dá para saber o destino de cada um?
-- [ ] Quantos links diferentes têm o mesmo texto? Eles levam ao mesmo lugar?
-- [ ] Algum link abre em nova aba? O usuário é avisado?
-- [ ] O link do ícone do carrinho tem um nome acessível útil?
-- [ ] Existe algum elemento que **parece** botão mas não é `<button>`? Teste: dá para chegar nele só com Tab e ativar com Enter?
-- [ ] Existe algum `<a>` que **executa uma ação** em vez de navegar?
-- [ ] Pergunta-guia para cada um: *isso navega ou isso executa uma ação?*
+- [X] Leia **só** os textos dos links, sem o parágrafo em volta. Dá para saber o destino de cada um?
+- [X] Quantos links diferentes têm o mesmo texto? Eles levam ao mesmo lugar?
+- [X] Algum link abre em nova aba? O usuário é avisado?
+- [X] O link do ícone do carrinho tem um nome acessível útil?
+- [X] Existe algum elemento que **parece** botão mas não é `<button>`? Teste: dá para chegar nele só com Tab e ativar com Enter?
+- [X] Existe algum `<a>` que **executa uma ação** em vez de navegar?
+- [X] Pergunta-guia para cada um: *isso navega ou isso executa uma ação?*
 
 ### 6. Listas
 
