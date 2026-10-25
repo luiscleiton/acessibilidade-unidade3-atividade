@@ -277,3 +277,18 @@
   .obrigatorio {
     color: #a32b1c;
   }
+
+  .skip-link {
+    position: absolute;
+    left: -99999px;
+    top: 10px;
+  }
+
+  .skip-link:focus {
+    left: 10px;
+    background: #ffffff;
+    color: #000000;
+    padding: 10px 16px;
+    z-index: 1000;
+    border: solid 2px #000000;
+  }
