@@ -1,4 +1,3 @@
-
 * {
   box-sizing: border-box;
 }
@@ -106,9 +105,17 @@
   --cor-skip-borda: #ffffff;
 }
 
-/* Estrutura geral */
+/* Configurações gerais e proteção contra overflow */
+
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
 
 body {
+  width: 100%;
+  max-width: 100%;
   margin: 0;
   font-family: system-ui, "Segoe UI", Arial, sans-serif;
   color: var(--cor-texto);
@@ -116,11 +123,26 @@ body {
   line-height: 1.55;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  max-width: 100%;
+  font: inherit;
+}
+
 .wrap {
+  width: 100%;
   max-width: 1100px;
+  min-height: 100vh;
   margin: 0 auto;
   background: var(--cor-superficie);
-  min-height: 100vh;
 }
 
 /* Cabeçalho */
@@ -135,10 +157,20 @@ header.principal {
   gap: 16px;
 }
 
+header.principal > div {
+  min-width: 0;
+}
+
 header.principal a {
   color: var(--cor-link-header);
   display: inline-flex;
   align-items: center;
+  flex-shrink: 0;
+}
+
+header.principal a img {
+  width: 34px;
+  height: 34px;
 }
 
 .nome-site {
@@ -146,6 +178,7 @@ header.principal a {
   font-weight: 800;
   letter-spacing: -0.5px;
   margin: 0 0 6px;
+  overflow-wrap: anywhere;
 }
 
 .subtitulo {
@@ -155,13 +188,13 @@ header.principal a {
 }
 
 .botao-tema {
+  flex-shrink: 0;
   background: transparent;
   color: var(--cor-texto-header);
   border: 1px solid rgba(255, 255, 255, 0.55);
   border-radius: 7px;
   padding: 9px 12px;
   cursor: pointer;
-  font: inherit;
   font-size: 13px;
 }
 
@@ -228,6 +261,7 @@ nav.trilha a {
 
 a {
   color: var(--cor-link);
+  overflow-wrap: anywhere;
 }
 
 a:focus-visible,
@@ -252,39 +286,46 @@ input:focus-visible {
   border: 2px solid var(--cor-skip-borda);
 }
 
-/* Conteúdo */
+/* Conteúdo principal */
 
 .miolo {
   display: flex;
   gap: 28px;
   padding: 24px;
   align-items: flex-start;
+  min-width: 0;
 }
 
 main {
-  flex: 1 1 auto;
+  flex: 1 1 0;
   min-width: 0;
+  max-width: 100%;
 }
 
 main h1 {
   font-size: 28px;
   margin: 0 0 16px;
+  overflow-wrap: anywhere;
 }
 
 main h2 {
   font-size: 21px;
   margin: 26px 0 10px;
+  overflow-wrap: anywhere;
 }
 
 main h3 {
   font-size: 17px;
   margin: 20px 0 8px;
+  overflow-wrap: anywhere;
 }
 
 /* Banner rotativo */
 
 .banner-rotativo {
   position: relative;
+  width: 100%;
+  max-width: 100%;
   height: 340px;
   overflow: hidden;
   border-radius: 14px;
@@ -299,6 +340,7 @@ main h3 {
   inset: 0;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
 
 .banner-item.ativo {
@@ -308,20 +350,24 @@ main h3 {
 
 .banner-item img {
   width: 100%;
+  max-width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
+  object-position: center;
 }
 
 .banner-texto {
   position: absolute;
   inset: auto 0 0;
+  max-width: 100%;
   padding: 42px 28px 26px;
   color: #ffffff;
   background: linear-gradient(
     transparent,
     rgba(0, 0, 0, 0.88)
   );
+  overflow-wrap: anywhere;
 }
 
 .banner-texto h2 {
@@ -340,16 +386,19 @@ main h3 {
   inset: 50% 12px auto;
   display: flex;
   justify-content: space-between;
+  gap: 8px;
   transform: translateY(-50%);
   pointer-events: none;
 }
 
 .controles-banner button {
   pointer-events: auto;
+  flex-shrink: 0;
   border: 0;
   border-radius: 50%;
   width: 42px;
   height: 42px;
+  padding: 0;
   background: rgba(0, 0, 0, 0.72);
   color: #ffffff;
   font-size: 20px;
@@ -364,6 +413,8 @@ main h3 {
 
 aside {
   flex: 0 0 240px;
+  min-width: 0;
+  max-width: 100%;
   background: var(--cor-aside-fundo);
   border: 1px solid var(--cor-aside-borda);
   padding: 16px;
@@ -374,6 +425,7 @@ aside {
 aside h2 {
   font-size: 16px;
   margin: 0 0 8px;
+  overflow-wrap: anywhere;
 }
 
 aside ul {
@@ -392,6 +444,8 @@ aside li {
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -401,6 +455,7 @@ aside li {
   box-sizing: border-box;
   flex: 1 1 240px;
   min-width: 0;
+  max-width: 100%;
   background: var(--cor-card);
   border: 1px solid var(--cor-borda-card);
   border-radius: 10px;
@@ -420,8 +475,10 @@ aside li {
 .imagem-produto {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: 200px;
   object-fit: contain;
+  object-position: center;
   margin-bottom: 12px;
   border-radius: 6px;
 }
@@ -429,6 +486,7 @@ aside li {
 .cartao h4 {
   margin: 0 0 4px;
   font-size: 16px;
+  overflow-wrap: anywhere;
 }
 
 .preco {
@@ -438,9 +496,15 @@ aside li {
   font-size: 17px;
 }
 
+.cartao .acao {
+  margin-top: auto;
+  overflow-wrap: anywhere;
+}
+
 /* Botões */
 
 button.acao {
+  max-width: 100%;
   background: var(--cor-botao);
   color: var(--cor-botao-texto);
   padding: 10px 14px;
@@ -456,17 +520,23 @@ button.acao:hover {
   filter: brightness(0.92);
 }
 
-.cartao .acao {
-  margin-top: auto;
-}
+/* Tabela responsiva */
 
-/* Tabela */
+.tabela-responsiva {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 14px 0;
+  -webkit-overflow-scrolling: touch;
+}
 
 table {
   border-collapse: collapse;
   width: 100%;
+  max-width: 100%;
   margin: 14px 0;
   font-size: 14px;
+  table-layout: fixed;
 }
 
 caption {
@@ -480,6 +550,8 @@ td {
   border: 1px solid var(--cor-borda);
   padding: 10px 12px;
   text-align: left;
+  overflow-wrap: anywhere;
+  word-break: normal;
 }
 
 thead th {
@@ -506,6 +578,12 @@ tbody tr:nth-child(even) td {
 
 /* Formulário */
 
+form {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
 label {
   display: block;
   font-weight: 600;
@@ -516,7 +594,10 @@ input[type="text"],
 input[type="tel"],
 input[type="email"],
 input[type="password"] {
+  display: block;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   padding: 10px;
   background: var(--cor-input-fundo);
   color: var(--cor-input-texto);
@@ -544,6 +625,8 @@ input[aria-invalid="true"] {
 }
 
 fieldset {
+  min-width: 0;
+  max-width: 100%;
   border: 1px solid var(--cor-fieldset-borda);
   border-radius: 6px;
   margin: 18px 0;
@@ -551,8 +634,10 @@ fieldset {
 }
 
 legend {
+  max-width: 100%;
   font-weight: 600;
   padding: 0 6px;
+  overflow-wrap: anywhere;
 }
 
 .opcao {
@@ -578,6 +663,7 @@ legend {
   padding: 12px 14px;
   border-radius: 6px;
   font-size: 14px;
+  overflow-wrap: anywhere;
 }
 
 .obrigatorio {
@@ -592,6 +678,7 @@ footer.principal {
   padding: 20px 24px;
   font-size: 13px;
   margin-top: 10px;
+  overflow-wrap: anywhere;
 }
 
 footer.principal a {
@@ -610,7 +697,7 @@ footer.principal a {
   }
 }
 
-/* Responsividade */
+/* Responsividade para tablets e celulares */
 
 @media (max-width: 760px) {
   .miolo {
@@ -622,6 +709,7 @@ footer.principal a {
   main,
   aside {
     width: 100%;
+    max-width: 100%;
   }
 
   aside {
@@ -646,7 +734,9 @@ footer.principal a {
   }
 
   .cartao {
+    flex: 1 1 auto;
     width: 100%;
+    max-width: 100%;
   }
 
   .banner-rotativo {
@@ -669,6 +759,10 @@ footer.principal a {
     height: 220px;
   }
 
+  .tabela-responsiva {
+    overflow-x: auto;
+  }
+
   table {
     font-size: 12px;
   }
@@ -676,17 +770,46 @@ footer.principal a {
   th,
   td {
     padding: 7px;
-    overflow-wrap: anywhere;
   }
 }
+
+/* Celulares estreitos */
 
 @media (max-width: 420px) {
   .nome-site {
     font-size: 20px;
   }
 
+  .miolo {
+    padding: 12px;
+  }
+
+  header.principal {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  nav.principal,
+  nav.trilha {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
   .banner-rotativo {
     height: 220px;
+    border-radius: 8px;
+  }
+
+  .banner-texto {
+    padding: 28px 14px 14px;
+  }
+
+  .banner-texto h2 {
+    font-size: 18px;
+  }
+
+  .banner-texto p {
+    font-size: 13px;
   }
 
   .controles-banner {
@@ -696,6 +819,18 @@ footer.principal a {
   .controles-banner button {
     width: 36px;
     height: 36px;
+  }
+
+  .cartao {
+    padding: 10px;
+  }
+
+  .imagem-produto {
+    height: 190px;
+  }
+
+  footer.principal {
+    padding: 16px 12px;
   }
 }
 
@@ -714,4 +849,214 @@ footer.principal a {
   .cartao:hover {
     transform: none;
   }
+}
+
+/* Campos de preenchimento e seleção */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 12px;
+    margin-top: 5px;
+    background-color: var(--cor-input-fundo);
+    color: var(--cor-input-texto);
+    border: 1px solid var(--cor-input-borda);
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 15px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Destaque dos campos durante a navegação */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--cor-link);
+}
+
+/* Indicador de foco acessível para teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--cor-link);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* Área de resumo das mensagens de erro */
+.resumo-erros {
+    border: 1px solid var(--cor-erro);
+    border-left-width: 5px;
+    padding: 18px;
+    margin: 20px 0;
+    border-radius: 8px;
+    background-color: var(--cor-input-fundo);
+}
+
+/* Título do resumo */
+.resumo-erros h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 19px;
+}
+
+/* Lista de erros */
+.resumo-erros ul {
+    padding-left: 22px;
+    margin-bottom: 0;
+}
+
+.resumo-erros li {
+    margin: 8px 0;
+}
+
+/* Links para acessar os campos com problemas */
+.resumo-erros a {
+    color: var(--cor-erro);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+/* Campo oculto para ajudar a detectar spam */
+.honeypot {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Identificação visual dos campos inválidos */
+input[aria-invalid="true"],
+select[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+    border: 2px solid var(--cor-erro);
+}
+
+/* Mensagens de erro próximas aos campos */
+.erro {
+    color: var(--cor-erro);
+    font-size: 14px;
+    margin: 6px 0 0;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 600px) {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="tel"],
+    input[type="date"],
+    select,
+    textarea {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .resumo-erros {
+        padding: 14px;
+    }
+}
+
+/* Respeita a preferência por movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+    input,
+    select,
+    textarea {
+        transition: none;
+    }
+}
+
+
+/* Botão de alternância de tema */
+.botao-tema {
+    padding: 10px 14px;
+    border: 1px solid currentColor;
+    border-radius: 6px;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+.botao-tema:hover {
+    opacity: 0.85;
+}
+
+.botao-tema:focus-visible {
+    outline: 3px solid #e6a23c;
+    outline-offset: 3px;
+}
+
+/* Tema escuro */
+body.tema-escuro {
+    background-color: #181818;
+    color: #f1f1f1;
+}
+
+body.tema-escuro .wrap {
+    background-color: #242424;
+    color: #f1f1f1;
+}
+
+body.tema-escuro header.principal,
+body.tema-escuro nav.principal,
+body.tema-escuro footer.principal {
+    background-color: #111827;
+    color: #ffffff;
+}
+
+body.tema-escuro a {
+    color: #8ecbff;
+}
+
+body.tema-escuro a:visited {
+    color: #d0b7ff;
+}
+
+body.tema-escuro input,
+body.tema-escuro select,
+body.tema-escuro textarea {
+    background-color: #303030;
+    color: #ffffff;
+    border-color: #777777;
+}
+
+body.tema-escuro input::placeholder,
+body.tema-escuro textarea::placeholder {
+    color: #cccccc;
+}
+
+body.tema-escuro fieldset {
+    border-color: #666666;
+}
+
+body.tema-escuro .dica {
+    color: #cccccc;
+}
+
+body.tema-escuro .erro {
+    color: #ff9999;
+}
+
+body.tema-escuro .aviso {
+    color: #f1f1f1;
+}
+
+body.tema-escuro .botao-tema {
+    color: #ffffff;
+    border-color: #ffffff;
 }

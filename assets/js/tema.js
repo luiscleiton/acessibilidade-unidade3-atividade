@@ -1,4 +1,3 @@
-
 const botaoTema = document.getElementById("alternar-tema");
 const elementoHtml = document.documentElement;
 
