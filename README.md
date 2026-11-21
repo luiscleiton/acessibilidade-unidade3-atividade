@@ -1,157 +1,135 @@
-# Atividade — Conserte a página
+# Projeto Acessibilidade - Prof. Sandro Sá
+# Aluno: Luís Cleiton
 
-**Unidade 3 · HTML Semântico: a Base da Acessibilidade**
+## 🎵 Harmonia Instrumentos Musicais
 
-Esta é a página da loja fictícia **Harmonia Instrumentos Musicais**. Abra `index.html` no navegador: o layout está alinhado, as cores estão certas, os botões clicam. Nenhum cliente que enxerga reclamou.
-
-A loja recebeu uma reclamação de um cliente que usa leitor de tela. Ele não consegue encontrar o conteúdo principal, não sabe para onde os links levam e desistiu do formulário de contato.
-
-**A página tem 34 problemas de semântica e acessibilidade. Sua tarefa é consertá-los.**
-
----
-
-## O que você vai entregar
-
-1. Um **fork** deste repositório com o `index.html` corrigido.
-2. Uma **página publicada no GitHub Pages** mostrando sua versão corrigida.
-3. Um **Pull Request** para este repositório, com o link do seu Pages no corpo do PR.
-
-O Pull Request **é** a entrega. O diff dele mostra exatamente o que você mudou  é isso que será avaliado. Ele não será mesclado; será revisado, comentado e fechado.
+![Status](https://img.shields.io/badge/Status-Concluído-success)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
 ---
 
-## Passo a passo
+## 📌 Sobre o projeto
 
-### 1. Faça o fork
+O **Harmonia Instrumentos Musicais** é um projeto acadêmico desenvolvido ao longo do semestre com o objetivo de criar uma loja virtual de instrumentos musicais, priorizando acessibilidade digital, usabilidade, inclusão e responsividade.
 
-Clique em **Fork**, no topo desta página. Você vai ficar com uma cópia do repositório na sua conta.
+## 🎯 Objetivos
 
-### 2. Traga para o seu computador
+- Desenvolver uma página web semanticamente estruturada.
+- Aplicar boas práticas de acessibilidade digital.
+- Facilitar a navegação por teclado e leitores de tela.
+- Implementar recursos de personalização visual.
+- Criar formulários acessíveis com validação.
+- Garantir uma experiência responsiva em diferentes dispositivos.
 
-```bash
-git clone https://github.com/SEU-USUARIO/acessibilidade-unidade3-atividade.git cd acessibilidade-unidade3-atividade
-git checkout -b correcao
-```
+## ♿ Recursos de acessibilidade implementados
 
-> Nunca trabalhe direto na branch `main`. Trabalhe na branch `correcao`.
+### 1. HTML semântico
 
-### 3. Conserte o `index.html`
+- Utilização de tags como `<header>`, `<nav>`, `<main>`, `<section>`, `<article>` e `<footer>`.
+- Organização hierárquica dos títulos.
+- Correção da estrutura de tabelas.
+- Identificação adequada de links, botões e listas.
+- Associação correta entre `<label>` e campos de formulário.
 
-Use o [`CHECKLIST.md`](CHECKLIST.md) como guia. Ele tem 7 blocos de verificação, na mesma ordem da aula: apresentação vs. semântica, cabeçalhos, landmarks, tabelas, links e botões, listas e formulários.
+### 2. Skip Link
 
-**Regras da correção:**
+Implementação de um link que permite ao usuário pular diretamente para o conteúdo principal.
 
-- Você pode acrescentar, trocar e remover tags HTML à vontade.
-- Você pode ajustar os seletores do CSS para acompanhar as tags novas.
-- **Mantenha o layout**: mesmas cores, mesmas colunas, mesmos cartões, mesma tabela. Trocar `<div>` por `<main>` ou `<td>` por `<th>` não deve reposicionar nada na tela.
-- Exceção: algumas correções **acrescentam informação visível** de propósito o aviso "(abre em nova aba)", o texto "(obrigatório)", o `<caption>` da tabela, a borda do `<fieldset>`e mensagens de erro específicas. Essas mudanças são esperadas.
-- Não use JavaScript. Não use ARIA onde uma tag HTML nativa já resolve o problema.
-  
-> Se ao final a página ficou visualmente equivalente e estruturalmente diferente, você entendeu a aula.
+- Primeiro elemento focável da página.
+- Oculto visualmente até receber foco.
+- Operável pelo teclado.
+- Facilita a navegação com leitores de tela.
 
-### 4. Faça commits pequenos
+### 3. Tema claro e escuro
 
-Um commit por bloco do checklist ajuda muito na hora da revisão:
+- Variáveis CSS para gerenciamento de cores.
+- Utilização de `prefers-color-scheme`.
+- Contraste adequado entre textos e fundos.
+- Opção de alternância manual de tema.
 
-```bash
-git add index.html
-git commit -m "Corrige hierarquia de cabecalhos"
-```
+### 4. Movimento reduzido
 
-Sugestão de mensagens: `Adiciona landmarks`, `Corrige textos de link`, `Transforma tabela de layout em CSS Grid`, `Associa labels aos campos do formulario`.
+- Animação de entrada do banner.
+- Efeitos de interação nos cartões.
+- Transições do carrossel.
+- Utilização de `prefers-reduced-motion`.
 
-### 5. Envie para o seu fork
+### 5. Formulário de cadastro acessível
 
-```bash
-git push -u origin correcao
-```
+**Funcionalidades:**
 
-### 6. Publique no GitHub Pages
+- Nome completo.
+- E-mail.
+- CPF.
+- Data de nascimento.
+- Telefone.
+- Senha e confirmação de senha.
+- Seleção de gênero.
+- Interesses.
+- Como conheceu o site.
+- Aceite dos termos.
+- Campo anti-spam (honeypot).
 
-No **seu fork**: `Settings` → `Pages` → em **Source**, escolha `Deploy from a branch` → selecione a branch **`correcao`** e a pasta **`/ (root)`** → `Save`.
+**Recursos de acessibilidade:**
 
-Espere de 1 a 2 minutos e recarregue a página de Settings. O endereço vai aparecer no topo, no formato:
+- Labels associados explicitamente aos campos.
+- Utilização de `<fieldset>` e `<legend>`.
+- Identificação de campos obrigatórios.
+- Instruções de preenchimento.
+- Navegação por teclado.
+- Mensagens de erro acessíveis.
+- Identificação de campos inválidos.
+- Resumo de erros com links para os campos correspondentes.
 
-```
-https://SEU-USUARIO.github.io/acessibilidade-unidade3-atividade/
-```
+### 6. Validação com JavaScript
 
-**Confira que o link abre a sua versão corrigida** antes de continuar.
+- Validação ao perder o foco (`blur`).
+- Mensagens de erro específicas.
+- Utilização de `aria-describedby`.
+- Atualização de `aria-invalid`.
+- Resumo dos erros com `role="alert"`.
+- Remoção das mensagens após a correção dos campos.
 
-Se você não tem certeza de nenhum destes passos, veja o [`GUIA-GIT-E-PAGES.md`](GUIA-GIT-E-PAGES.md), que tem os comandos comentados e o caminho pelo site do GitHub.
+### 7. Responsividade
 
-### 7. Abra o Pull Request
+#### 🖥️ Desktop
 
-No seu fork, clique em **Contribute** → **Open pull request**.
+- Aproveitamento do espaço horizontal.
+- Organização dos conteúdos em colunas.
+- Exibição dos cartões e elementos da loja.
 
-- **Base:** `main` deste repositório (o do professor)
-- **Compare:** a sua branch `correcao`
+#### 📱 Tablet
 
-O corpo do PR já vem com um formulário. Preencha, principalmente:
+- Ajuste das colunas e espaçamentos.
+- Adaptação dos componentes.
+- Melhor aproveitamento da área disponível.
 
-- o **link do seu GitHub Pages**;
-- a lista dos problemas que você corrigiu, agrupados pelos 7 blocos;
-- por que cada troca melhora a experiência de quem usa tecnologia assistiva.
+#### 📲 Celular
 
-Pronto. A entrega está feita.
+- Layout adaptado para telas menores.
+- Conteúdo organizado verticalmente.
+- Navegação facilitada.
+- Campos e botões adequados para interação por toque.
 
----
+## 🛠️ Tecnologias utilizadas
 
-## Verificação automática
+| Tecnologia | Aplicação |
+|---|---|
+| HTML5 | Estrutura e semântica |
+| CSS3 | Estilização e responsividade |
+| JavaScript | Validação e interatividade |
+| Git | Controle de versão |
+| GitHub | Hospedagem do repositório |
+| GitHub Pages | Publicação do projeto |
 
-Assim que o PR abrir, um teste automático roda sobre a sua página e publica um relatório. Para ver: aba **Checks** do seu PR → **Acessibilidade** → abra o resumo do job.
+## 🎓 Conclusão
 
-O relatório traz validação de HTML e uma varredura WCAG 2.1 AA com o axe-core. Use como apoio mas leia com atenção o que vem a seguir.
+O projeto **Harmonia Instrumentos Musicais** representa a aplicação prática dos conhecimentos adquiridos ao longo do semestre, reunindo conceitos de desenvolvimento front-end, acessibilidade digital, inclusão e responsividade.
 
-Na versão original desta página, as duas ferramentas juntas apontam **menos da metade** dos 34 problemas. O axe encontra 6 tipos de problema; o validador de HTML, 15 erros de sintaxe. Nenhum dos dois percebe:
+Durante o desenvolvimento, foram trabalhadas melhorias na estrutura HTML, na navegação, na apresentação visual e na interação com os usuários.
 
-- textos de link sem sentido isolado ("clique aqui", "saiba mais")
-- `<div>` fazendo papel de botão, inalcançável pelo teclado
-- lista simulada com `<br>` em vez de `<ul>`
-- tabela usada para layout
-- `<td>` estilizado no lugar de `<th scope>`
-- `<caption>` ausente
-- grupo de campos sem `<fieldset>`/`<legend>`
-- `<b>`/`<i>`/`<u>` onde cabia `<strong>`/`<em>`/`<ins>`
-- texto alternativo que existe mas não descreve nada útil
-- mensagens de erro genéricas como "Erro."
+Mais do que criar uma loja virtual visualmente agradável, o projeto permitiu compreender a importância de desenvolver páginas acessíveis, intuitivas e funcionais para todas as pessoas, independentemente de suas necessidades ou dos dispositivos utilizados.
 
-**Um relatório limpo não significa que a página está correta.** Essa é, aliás, uma das lições mais importantes da unidade: acessibilidade não se resolve rodando uma ferramenta. O checklist continua sendo o guia.
-
----
-
-## Como você será avaliado
-
-| Faixa        | Critério                                                                                            |
-| ------------ | --------------------------------------------------------------------------------------------------- |
-| Insuficiente | Menos de 10 itens corrigidos, ou mudanças apenas no CSS                                             |
-| Suficiente   | Cabeçalhos e landmarks corrigidos (blocos 2 e 3)                                                    |
-| Bom          | Acrescenta links, listas e tabela (blocos 4, 5 e 6)                                                 |
-| Excelente    | Formulário completo com `fieldset`/`legend`, `required` e mensagens de erro programáticas (bloco 7) |
-
-Achar 15 problemas com boa justificativa vale mais do que listar 30 sem explicar nenhum. A
-justificativa entra no corpo do PR.
-
----
-
-## Como testar o que você corrigiu
-
-1. **Só com o teclado.** Percorra a página inteira com Tab.
-   Você alcança e ativa todos os controles?
-   O foco fica visível?
-   Na versão original, os dois botões "Adicionar ao carrinho" são inalcançáveis descobrir por quê já resolve um dos 34 problemas.
-3. **Com leitor de tela.** No NVDA (gratuito, Windows): `H` pula entre cabeçalhos, `Insert + F7` abre a lista de elementos com as abas Links, Cabeçalhos e     Landmarks, `T` pula entre tabelas, `F` entre campos de formulário. Compare a lista de elementos antes e depois da sua correção.
-   No macOS, o VoiceOver (`Cmd + F5`) tem o rotor em `VO + U`.
-4. **Validador do W3C.** <https://validator.w3.org/nu/>
-5. **Comparação visual.** Abra a original e a sua versão em abas lado a lado.
-
----
-
-## Prazo e dúvidas
-
-Prazo: **09/09/2026**.
-
-Dúvidas sobre a atividade: abra uma **issue** neste repositório. Dúvidas sobre Git e GitHub Pages:
-Comece pelo [`GUIA-GIT-E-PAGES.md`](GUIA-GIT-E-PAGES.md).
-
-
+A acessibilidade não deve ser considerada um recurso adicional, mas uma parte essencial do desenvolvimento de qualquer aplicação web.
