@@ -168,7 +168,7 @@ header.principal {
   flex-wrap: wrap;
 }
 
-header.principal > div {
+header.principal>div {
   min-width: 0;
 }
 
@@ -260,7 +260,7 @@ nav.trilha ul {
   gap: 6px;
 }
 
-nav.trilha li + li::before {
+nav.trilha li+li::before {
   content: "› ";
 }
 
@@ -374,10 +374,8 @@ main h3 {
   max-width: 100%;
   padding: 42px 28px 26px;
   color: #ffffff;
-  background: linear-gradient(
-    transparent,
-    rgba(0, 0, 0, 0.88)
-  );
+  background: linear-gradient(transparent,
+      rgba(0, 0, 0, 0.88));
   overflow-wrap: anywhere;
 }
 
@@ -848,6 +846,7 @@ footer.principal a {
 /* Preferência por movimento reduzido */
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -870,25 +869,25 @@ input[type="tel"],
 input[type="date"],
 select,
 textarea {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 11px 12px;
-    margin-top: 5px;
-    background-color: var(--cor-input-fundo);
-    color: var(--cor-input-texto);
-    border: 1px solid var(--cor-input-borda);
-    border-radius: 7px;
-    font-family: inherit;
-    font-size: 15px;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 12px;
+  margin-top: 5px;
+  background-color: var(--cor-input-fundo);
+  color: var(--cor-input-texto);
+  border: 1px solid var(--cor-input-borda);
+  border-radius: 7px;
+  font-family: inherit;
+  font-size: 15px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Destaque dos campos durante a navegação */
 input:focus,
 select:focus,
 textarea:focus {
-    border-color: var(--cor-link);
+  border-color: var(--cor-link);
 }
 
 /* Indicador de foco acessível para teclado */
@@ -897,184 +896,188 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-    outline: 3px solid var(--cor-link);
-    outline-offset: 3px;
-    border-radius: 4px;
+  outline: 3px solid var(--cor-link);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 /* Área de resumo das mensagens de erro */
 .resumo-erros {
-    border: 1px solid var(--cor-erro);
-    border-left-width: 5px;
-    padding: 18px;
-    margin: 20px 0;
-    border-radius: 8px;
-    background-color: var(--cor-input-fundo);
+  border: 1px solid var(--cor-erro);
+  border-left-width: 5px;
+  padding: 18px;
+  margin: 20px 0;
+  border-radius: 8px;
+  background-color: var(--cor-input-fundo);
 }
 
 /* Título do resumo */
 .resumo-erros h2 {
-    margin-top: 0;
-    margin-bottom: 12px;
-    font-size: 19px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 19px;
 }
 
 /* Lista de erros */
 .resumo-erros ul {
-    padding-left: 22px;
-    margin-bottom: 0;
+  padding-left: 22px;
+  margin-bottom: 0;
 }
 
 .resumo-erros li {
-    margin: 8px 0;
+  margin: 8px 0;
 }
 
 /* Links para acessar os campos com problemas */
 .resumo-erros a {
-    color: var(--cor-erro);
-    font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 3px;
+  color: var(--cor-erro);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* Campo oculto para ajudar a detectar spam */
 .honeypot {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip-path: inset(50%);
-    white-space: nowrap;
-    border: 0;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Identificação visual dos campos inválidos */
 input[aria-invalid="true"],
 select[aria-invalid="true"],
 textarea[aria-invalid="true"] {
-    border: 2px solid var(--cor-erro);
+  border: 2px solid var(--cor-erro);
 }
 
 /* Mensagens de erro próximas aos campos */
 .erro {
-    color: var(--cor-erro);
-    font-size: 14px;
-    margin: 6px 0 0;
+  color: var(--cor-erro);
+  font-size: 14px;
+  margin: 6px 0 0;
 }
 
 /* Ajuste para telas pequenas */
 @media (max-width: 600px) {
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    input[type="tel"],
-    input[type="date"],
-    select,
-    textarea {
-        padding: 12px;
-        font-size: 16px;
-    }
 
-    .resumo-erros {
-        padding: 14px;
-    }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="date"],
+  select,
+  textarea {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .resumo-erros {
+    padding: 14px;
+  }
 }
 
 /* Respeita a preferência por movimento reduzido */
 @media (prefers-reduced-motion: reduce) {
-    input,
-    select,
-    textarea {
-        transition: none;
-    }
+
+  input,
+  select,
+  textarea {
+    transition: none;
+  }
 }
 
 
 /* Botão de alternância de tema */
 .botao-tema {
-    padding: 10px 14px;
-    border: 1px solid currentColor;
-    border-radius: 6px;
-    background: transparent;
-    color: inherit;
-    font: inherit;
-    cursor: pointer;
+  padding: 10px 14px;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
 }
 
 .botao-tema:hover {
-    opacity: 0.85;
+  opacity: 0.85;
 }
 
 .botao-tema:focus-visible {
-    outline: 3px solid #e6a23c;
-    outline-offset: 3px;
+  outline: 3px solid #e6a23c;
+  outline-offset: 3px;
 }
 
 /* Tema escuro */
 body.tema-escuro {
-    background-color: #181818;
-    color: #f1f1f1;
+  background-color: #181818;
+  color: #f1f1f1;
 }
 
 body.tema-escuro .wrap {
-    background-color: #242424;
-    color: #f1f1f1;
+  background-color: #242424;
+  color: #f1f1f1;
 }
 
 body.tema-escuro header.principal,
 body.tema-escuro nav.principal,
 body.tema-escuro footer.principal {
-    background-color: #111827;
-    color: #ffffff;
+  background-color: #111827;
+  color: #ffffff;
 }
 
 body.tema-escuro a {
-    color: #8ecbff;
+  color: #8ecbff;
 }
 
 body.tema-escuro a:visited {
-    color: #d0b7ff;
+  color: #d0b7ff;
 }
 
 body.tema-escuro input,
 body.tema-escuro select,
 body.tema-escuro textarea {
-    background-color: #303030;
-    color: #ffffff;
-    border-color: #777777;
+  background-color: #303030;
+  color: #ffffff;
+  border-color: #777777;
 }
 
 body.tema-escuro input::placeholder,
 body.tema-escuro textarea::placeholder {
-    color: #cccccc;
+  color: #cccccc;
 }
 
 body.tema-escuro fieldset {
-    border-color: #666666;
+  border-color: #666666;
 }
 
 body.tema-escuro .dica {
-    color: #cccccc;
+  color: #cccccc;
 }
 
 body.tema-escuro .erro {
-    color: #ff9999;
+  color: #ff9999;
 }
 
 body.tema-escuro .aviso {
-    color: #f1f1f1;
+  color: #f1f1f1;
 }
 
 body.tema-escuro .botao-tema {
-    color: #ffffff;
-    border-color: #ffffff;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
 /* Evita que imagens ultrapassem os limites da tela */
 
-img, video, iframe {
+img,
+video,
+iframe {
   max-width: 100%;
 }
 
@@ -1082,84 +1085,107 @@ img, video, iframe {
 /* Botão do menu mobile */
 
 .menu-toggle {
-    display: none;
-    align-items: center;
-    gap: 8px;
-    padding: 9px 12px;
-    border: 1px solid var(--cor-link-header);
-    border-radius: 6px;
-    background: transparent;
-    color: var(--cor-link-header);
-    font-size: 15px;
-    cursor: pointer;
+  display: none;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border: 1px solid var(--cor-link-header);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--cor-link-header);
+  font-size: 15px;
+  cursor: pointer;
 }
 
 /* Menu expansível em telas menores */
 
 @media (max-width: 760px) {
 
-    .menu-toggle {
-        display: inline-flex;
-    }
+  .menu-toggle {
+    display: inline-flex;
+  }
 
-    nav.principal ul {
-        display: none;
-        flex-direction: column;
-        gap: 4px;
-        padding-top: 10px;
-    }
+  nav.principal ul {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    padding-top: 10px;
+  }
 
-    nav.principal.menu-aberto ul {
-        display: flex;
-    }
+  nav.principal.menu-aberto ul {
+    display: flex;
+  }
 
-    nav.principal ul a {
-        display: flex;
-        align-items: center;
-        min-height: 44px;
-        padding: 8px;
-    }
+  nav.principal ul a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 8px;
+  }
 
 }
 
 /* Organização do cabeçalho mobile */
 
-.identidade-site {
-    min-width: 0;
-}
-
 @media (max-width: 760px) {
 
-    header.principal {
-        display: grid;
-        grid-template-columns: 1fr auto 1fr;
-        align-items: center;
-        gap: 8px;
-        padding: 12px;
-    }
+  header.principal {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px;
+    position: relative;
+  }
 
-    .menu-toggle {
-        display: inline-flex;
-        justify-self: start;
-        align-items: center;
-    }
+  header.principal .identidade-site {
+    display: block !important;
+    flex: 0 0 100%;
+    width: 100%;
+    text-align: center;
+    order: -1;
+  }
 
-    .identidade-site {
-        display: none;
-    }
+  header.principal .nome-site {
+    font-size: 23px;
+    margin: 0;
+    line-height: 1.3;
+  }
 
-    .botao-tema {
-        justify-self: center;
-        white-space: nowrap;
-    }
+  header.principal .subtitulo {
+    display: block;
+    font-size: 13px;
+    margin-top: 4px;
+  }
 
-    .link-carrinho {
-        justify-self: end;
-    }
+  header.principal .menu-toggle {
+    display: inline-flex !important;
+    position: static !important;
+    margin: 0;
+    order: 1;
+  }
 
-    .link-carrinho img {
-        width: 30px;
-        height: 30px;
-    }
+  header.principal .botao-tema {
+    display: inline-flex;
+    position: absolute !important;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%) !important;
+    margin: 0;
+    order: 2;
+  }
 
+  header.principal .link-carrinho {
+    display: inline-flex;
+    position: static !important;
+    margin-left: auto;
+    order: 3;
+  }
+
+  header.principal .link-carrinho img {
+    width: 30px;
+    height: 30px;
+  }
 }
