@@ -1077,3 +1077,47 @@ body.tema-escuro .botao-tema {
 img, video, iframe {
   max-width: 100%;
 }
+
+
+/* Botão do menu mobile */
+
+.menu-toggle {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 12px;
+    border: 1px solid var(--cor-link-header);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--cor-link-header);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Menu expansível em telas menores */
+
+@media (max-width: 760px) {
+
+    .menu-toggle {
+        display: inline-flex;
+    }
+
+    nav.principal ul {
+        display: none;
+        flex-direction: column;
+        gap: 4px;
+        padding-top: 10px;
+    }
+
+    nav.principal.menu-aberto ul {
+        display: flex;
+    }
+
+    nav.principal ul a {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 8px;
+    }
+
+}

@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="assets/css/style.css">
 
   <script src="assets/js/tema.js" defer></script>
+  <script src="assets/js/menu.js" defer></script>
   <script src="assets/js/carrossel.js" defer></script>
 </head>
 
@@ -45,15 +46,28 @@
       </a>
     </header>
 
-    <nav class="principal" aria-label="Navegação principal">
-      <ul>
+    
+<nav class="principal" aria-label="Navegação principal">
+
+    <button
+        type="button"
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="menu-principal"
+    >
+        <span class="icone-menu" aria-hidden="true">☰</span>
+        <span class="texto-menu">Menu</span>
+    </button>
+
+    <ul id="menu-principal">
         <li><a href="index.html">Início</a></li>
         <li><a href="guitarras.html">Guitarras</a></li>
         <li><a href="baterias.html">Baterias</a></li>
         <li><a href="teclados.html">Teclados</a></li>
         <li><a href="contato.html">Contato</a></li>
-      </ul>
-    </nav>
+    </ul>
+
+</nav>
 
     <nav class="trilha" aria-label="Trilha de navegação">
       <ul>
