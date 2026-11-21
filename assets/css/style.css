@@ -1121,3 +1121,45 @@ img, video, iframe {
     }
 
 }
+
+/* Organização do cabeçalho mobile */
+
+.identidade-site {
+    min-width: 0;
+}
+
+@media (max-width: 760px) {
+
+    header.principal {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        align-items: center;
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+        justify-self: start;
+        align-items: center;
+    }
+
+    .identidade-site {
+        display: none;
+    }
+
+    .botao-tema {
+        justify-self: center;
+        white-space: nowrap;
+    }
+
+    .link-carrinho {
+        justify-self: end;
+    }
+
+    .link-carrinho img {
+        width: 30px;
+        height: 30px;
+    }
+
+}
